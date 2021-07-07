@@ -12,14 +12,23 @@
 
 
 //! OPERZIONE 1 - Array
-var firstName = ['Tizio', 'Caio', 'Sempronio'];
+var firstName = [' Tizio', ' Caio', ' Sempronio'];
 console.log('Lista nomi: ', firstName);
 
-var lastName = ['Verdi', 'Bianchi', 'Rossi'];
+var lastName = [' Verdi', ' Bianchi', ' Rossi'];
 console.log('Lista cognomi: ', lastName);
 
 //! OPERAZIONE 4 
 var partecipants = [];
+
+//Print in Html 
+var displayFirstName = document.getElementById('firstName-array');
+displayFirstName.innerHTML = 'Lista Nomi: ' + firstName;
+
+var displayLastName = document.getElementById('lastName-array');
+displayLastName.innerHTML = 'Lista Cognomi: ' + lastName;
+
+var displayPartecipants = document.getElementById('partecipants-list');
 
 
 //! OPERAZIONE 5 
@@ -49,3 +58,4 @@ while (partecipants.length < 3) {
 }
 
 console.table(partecipants);
+displayPartecipants.innerHTML = partecipants;
