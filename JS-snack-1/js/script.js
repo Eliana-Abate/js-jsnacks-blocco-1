@@ -14,13 +14,13 @@ console.log(sum);
 
 for (var i = 1; i <= 5; i++) {
     userNumber = parseInt(prompt('Inserisci un numero'));
+    console.log('numeri scelti dall\'utente: ', userNumber);
     
     if(!isNaN(userNumber)){
         sum += userNumber;
     }
 }
 
-console.log('numeri scelti dall\'utente: ', userNumber);
 console.log('somma numeri utente: ', sum);
 
 
@@ -28,7 +28,8 @@ console.log('somma numeri utente: ', sum);
 /*
 var = 1; 
 while (i <= 5) {
-    userNumber = parseInt(prompt('Inserisci un numero (' + i + '/5)');
+    userNumber = parseInt(prompt('Inserisci un numero'));
+    console.log('numeri scelti dall\'utente: ', userNumber);  
     
     if(!isNaN(userNumber)){
         sum += userNumber;
@@ -36,7 +37,6 @@ while (i <= 5) {
    i++;
 }
 
-console.log('numeri scelti dall\'utente: ', userNumber);
 console.log('somma numeri utente: ', sum);
 
 */
