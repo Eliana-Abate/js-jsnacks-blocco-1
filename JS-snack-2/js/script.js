@@ -13,7 +13,7 @@ do {
 
 
 if (userNumber % 2 === 0){
-    console.log(userNumber);
+    console.log('numero scelto dall\'utente: ', userNumber);
 } else {
-    console.log(userNumber + 1);
+    console.log('numero successivo a quello scelto: ', userNumber + 1);
 }
