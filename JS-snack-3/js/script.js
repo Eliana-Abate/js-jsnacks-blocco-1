@@ -5,36 +5,47 @@
 //! 1. Creo due array, uno per i nomi e l'altro per i cognomi
 //! 2. Creo due variabili per pescare un elemento random rispettivamente dalla lista dei nomi e da quella dei cognomi
 //! 3. Creo una variabile per sommare le stringhe dei due elementi random pescati dalle rispettive liste
-//! 4. Creo un ciclo affinché vengano generati al massimo tre nominativi e pongo la condizione che non ci siano duplicati
+//! 4. Creo una lista vuota (array vuoto) in cui inserire i nomi dei partecipanti (al punto 6)
+//! 5. Attraverso il ciclo WHILE pongo la condizione che lista vuota non conterrà più di 3 invitati
+//TODO 5.1 - Metto le precedenti operazioni (punti 2,3) nel ciclo, affinché esse siano ripetute al massimo 3 volte (= generino al massimo 3 nominativi)
+//! 6. All'interno del ciclo pongo la condizione che non ci siano duplicati e metto nell'array solo i nominativi che vengono estratti una volta sola
 
-//! 1 - Array
+
+//! OPERZIONE 1 - Array
 var firstName = ['Tizio', 'Caio', 'Sempronio'];
 console.log('Lista nomi: ', firstName);
 
 var lastName = ['Verdi', 'Bianchi', 'Rossi'];
 console.log('Lista cognomi: ', lastName);
 
+//! OPERAZIONE 4 
+var partecipants = [];
 
 
-//! 2 
-/*attraverso queste due variabili pescherò la posizione dell'elemento e la console stamperà l'indice*/
-var randomFirstName = Math.floor(Math.random() * firstName.length);
-console.log("posizione nome: ", randomFirstName);
+//! OPERAZIONE 5 
+while (partecipants.lenght < 3) {
+    //TODO 5.1
+    //! OPERAZIONE 2 
+    /*attraverso queste due variabili pescherò la posizione dell'elemento e la console stamperà l'indice*/
+    var randomFirstName = Math.floor(Math.random() * firstName.length);
+    console.log("posizione nome: ", randomFirstName);
 
-var randomLastName = Math.floor(Math.random() * lastName.length);
-console.log("posizione cognome: ", randomLastName);
+    var randomLastName = Math.floor(Math.random() * lastName.length);
+    console.log("posizione cognome: ", randomLastName);
 
-
-/*Il nome dell'elemento viene esplicitato attraverso la formula ARRAY[INDICE] = NOME ELEMENTO */
-var extractedFirstName = firstName[randomFirstName];
-var extractedLastName = lastName[randomLastName];
-
-
-
-//! 3 - Sommo le stringhe degli elementi pescati
-var fullNameExtracted = extractedFirstName + ' ' + extractedLastName;
-console.log('Nome partecipante: ', partecipants);
+    /*Il nome dell'elemento viene esplicitato attraverso la formula ARRAY[INDICE] = NOME ELEMENTO */
+    var extractedFirstName = firstName[randomFirstName];
+    var extractedLastName = lastName[randomLastName];
 
 
-//! 4 
+    //! OPERAZIONE 3 - Sommo le stringhe degli elementi pescati
+    var fullNameExtracted = extractedFirstName + ' ' + extractedLastName;
+    console.log('Nome partecipante: ', fullNameExtracted);
 
+    if (!partecipants.includes(fullNameExtracted)) {
+        partecipants.push(fullNameExtracted);
+        console.log('ho inserito: ', fullNameExtracted);
+    }
+}
+
+console.table(partecipants);
