@@ -8,16 +8,31 @@ Esegui questo programma in due versioni, con il for e con il while.
 //! 2. Creo un ciclo per chiedere all'utente un numero per 5 volte
 //! 3. All'interno del ciclo verifico che la variabile con cui chiedo il numero all'utente venga rispettata, ponendo la condizione che sia un numero
 
+
+//! 1
 var userNumber;
 var sum = 0;
 console.log(sum);
 
+
+//Print in Html 
+var numbersList = [];
+
+var displayUserNumber = document.getElementById('user-choices');
+var displaySum = document.getElementById('numbers-sum');
+
+
+//! 2
 for (var i = 1; i <= 5; i++) {
     userNumber = parseInt(prompt('Inserisci un numero'));
     console.log('numeri scelti dall\'utente: ', userNumber);
+    numbersList.push(userNumber);
+    displayUserNumber.innerHTML = '[ ' + numbersList + ' ]' ;
     
+    //! 3
     if(!isNaN(userNumber)){
         sum += userNumber;
+        displaySum.innerHTML = sum;
     }
 }
 
