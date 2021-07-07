@@ -32,5 +32,9 @@ var extractedLastName = lastName[randomLastName];
 
 
 //! 3 - Sommo le stringhe degli elementi pescati
-var partecipants = extractedFirstName + ' ' + extractedLastName;
+var fullNameExtracted = extractedFirstName + ' ' + extractedLastName;
 console.log('Nome partecipante: ', partecipants);
+
+
+//! 4 
+
