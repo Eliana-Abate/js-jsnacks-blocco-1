@@ -23,7 +23,7 @@ var partecipants = [];
 
 
 //! OPERAZIONE 5 
-while (partecipants.lenght < 3) {
+while (partecipants.length < 3) {
     //TODO 5.1
     //! OPERAZIONE 2 
     /*attraverso queste due variabili pescherò la posizione dell'elemento e la console stamperà l'indice*/
@@ -43,8 +43,8 @@ while (partecipants.lenght < 3) {
     console.log('Nome partecipante: ', fullNameExtracted);
 
     if (!partecipants.includes(fullNameExtracted)) {
-        partecipants.push(fullNameExtracted);
         console.log('ho inserito: ', fullNameExtracted);
+        partecipants.push(fullNameExtracted);
     }
 }
 
