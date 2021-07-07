@@ -9,11 +9,22 @@ fino a quando ne avrà tanti quanti l’altro.*/
 
 
 //! 1 - Array
-var firstArray = ['a', 'b', 'c', 'd', 'f', 'g'];
+var firstArray = [' a', ' b', ' c', ' d', ' f', ' g'];
 console.log('firstarray: ', firstArray);
 
-var secondArray = ['h', 'i'];
+var secondArray = [' h', ' i'];
 console.log('secondarray: ', secondArray);
+
+//Print in Html
+var display1stArray = document.getElementById('first-array');
+display1stArray.innerHTML = 'First Array: [' + firstArray + ' ]';
+
+var display2ndArray = document.getElementById('second-array');
+display2ndArray.innerHTML = 'Second Array: [' + secondArray + ' ]';
+
+var increasedArray1 = document.getElementById('increased-array-1');
+
+var increasedArray2 = document.getElementById('increased-array-2');
 
 
 
@@ -25,6 +36,7 @@ while (secondArray.length < firstArray.length) {
 
     var extractedFirstArray = firstArray[randomFirstArray];
     console.log('nome elemento estratto da firstArray: ', extractedFirstArray);
+
     
     //! Operazione 4
    if (!secondArray.includes(extractedFirstArray)) {
@@ -42,6 +54,7 @@ while (secondArray.length > firstArray.length) {
 
     var extractedSecondArray = secondArray[randomSecondArray];
     console.log('nome elemento estratto da secondArray: ', extractedSecondArray);
+
    
     //! Operazione 4
    if (!firstArray.includes(extractedSecondArray)) {
@@ -51,4 +64,7 @@ while (secondArray.length > firstArray.length) {
 }
 
 console.table(firstArray);
+increasedArray1.innerHTML = 'First Array: [' + firstArray + ' ]';
+
 console.table(secondArray);
+increasedArray2.innerHTML = 'Second Array: [' + secondArray + ' ]';
