@@ -13,7 +13,7 @@ var sum = 0;
 console.log(sum);
 
 for (var i = 1; i <= 5; i++) {
-    userNumber = parseInt(prompt('Inserisci un numero (' + i + '/5)');
+    userNumber = parseInt(prompt('Inserisci un numero'));
     
     if(!isNaN(userNumber)){
         sum += userNumber;
