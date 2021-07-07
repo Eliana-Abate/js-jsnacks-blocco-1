@@ -7,7 +7,7 @@
 //! 3. Creo una variabile per sommare le stringhe dei due elementi random pescati dalle rispettive liste
 //! 4. Creo un ciclo affinché vengano generati al massimo tre nominativi e pongo la condizione che non ci siano duplicati
 
-/* 1 */
+//! 1 - Array
 var firstName = ['Tizio', 'Caio', 'Sempronio'];
 console.log('Lista nomi: ', firstName);
 
@@ -15,19 +15,22 @@ var lastName = ['Verdi', 'Bianchi', 'Rossi'];
 console.log('Lista cognomi: ', lastName);
 
 
-/* 2 */
+
+//! 2 
+/*attraverso queste due variabili pescherò la posizione dell'elemento e la console stamperà l'indice*/
 var randomFirstName = Math.floor(Math.random() * firstName.length);
-console.log('Nome casuale: ', randomFirstName);
+console.log("posizione nome: ", randomFirstName);
 
 var randomLastName = Math.floor(Math.random() * lastName.length);
-console.log('Cognome casuale: ', randomLastName);
-
-/* Correzione della soluzione 
-var x = firstName[randomFirstName];
-var y = lastName[randomLastName];
-*/
+console.log("posizione cognome: ", randomLastName);
 
 
-/* 3 */
-var partecipants = randomFirstName + randomLastName;
+/*Il nome dell'elemento viene esplicitato attraverso la formula ARRAY[INDICE] = NOME ELEMENTO */
+var extractedFirstName = firstName[randomFirstName];
+var extractedLastName = lastName[randomLastName];
+
+
+
+//! 3 - Sommo le stringhe degli elementi pescati
+var partecipants = extractedFirstName + ' ' + extractedLastName;
 console.log('Nome partecipante: ', partecipants);
